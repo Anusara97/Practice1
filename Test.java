@@ -49,6 +49,14 @@ public class Test {
             System.out.println("Member with ID " + id + " not found.");
         }
 
+        Member p = m[4];
+        System.out.println(p.getId() +"\n"+ p.getName() +"\n"+ p.getAmount());
+
+        p.setName("Pasan");
+        display(m, 3243);
+        
+        p = null;
+        display(m, 3243);
     }
 
     public static void display(Member [] m, int id) {
