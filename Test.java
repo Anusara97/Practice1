@@ -39,6 +39,16 @@ public class Test {
         Member.calTotal(m);
         System.out.println("The total amount of each members: " +Member.getTotal() +"\n");
 
+        System.out.print("Enter a ID to find the Member object: ");
+        id = in.nextInt();
+        Member member = Member.getObject(m, id);
+        if (member != null) {
+            System.out.println("Found member with ID " + id + ":");
+            System.out.println("ID: " + member.getId() + "\nName: " + member.getName() + "\nAmount: " + member.getAmount() + "\n");
+        } else {
+            System.out.println("Member with ID " + id + " not found.");
+        }
+
     }
 
     public static void display(Member [] m, int id) {
