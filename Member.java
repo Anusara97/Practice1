@@ -52,4 +52,13 @@ public class Member{
             total += m[i].amount;
         }
     }
+
+    public static Member getObject(Member[] m, int id) {
+        for (int i = 0; i < m.length; i++) {
+            if (m[i].getId() == id) {
+                return m[i];
+            }
+        }
+        return null; // Return null if the member with the specified id is not found
+    }
 }
