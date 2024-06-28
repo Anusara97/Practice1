@@ -6,6 +6,7 @@ public class Test {
         Member [] m = new Member[6];
 
         int id;
+        String name;
 
         m[0] = new Member(1234, "Namal", 1000);
         m[1] = new Member(5872, "Saman", 1500);
@@ -20,6 +21,10 @@ public class Test {
         System.out.println("Enter a ID: ");
         id = in.nextInt();
         display(m, id);
+        in.nextLine();
+        System.out.println("Enter a name: ");
+        name = in.nextLine();
+        display(m, name);
     }
 
     public static void display(Member [] m, int id) {
@@ -32,7 +37,21 @@ public class Test {
             }
         }
         if (status == false) {
-            System.out.println(id +" is not a member.");
+            System.out.println(id +" is not a member.\n");
+        }
+    }
+
+    public static void display(Member [] m, String name) {
+        boolean status = false;
+        for (int i=0; i<m.length; i++) {
+            if (name.equals(m[i].getName()) ) {
+                System.out.println("ID: " +m[i].getId() +"\nName: " +m[i].getName() + "\nAmount: " + m[i].getAmount() +"\n");
+                status = true;
+                break;
+            }
+        }
+        if (status == false) {
+            System.out.println(name +" is not a member.");
         }
     }
 }
