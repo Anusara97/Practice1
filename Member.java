@@ -5,7 +5,9 @@ public class Member{
     private static double total;
 
     public Member (int id, String name, double amount) {
-
+        setId(id);
+        setName(name);
+        setAmount(amount);
     }
 
     public void setId(int id) {
